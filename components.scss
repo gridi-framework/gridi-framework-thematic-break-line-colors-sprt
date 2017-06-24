@@ -1,0 +1,6 @@
+@each $palette-color-prefix, $palette-color-variables in get-colors-palette($thematic-break-line-colors-support-extra-colors-palette, $thematic-break-line-colors-support-skip-colors-palette) {
+    .#{$colors-class-prefix}-#{$palette-color-prefix} hr,
+    hr.#{$colors-class-prefix}-#{$palette-color-prefix} {
+        @include include-hr-color(map_get($palette-color-variables, map_get($thematic-break-line-colors-helpers-parser, color)));
+    }
+}
